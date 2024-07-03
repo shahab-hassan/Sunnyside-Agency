@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+:root{
+    --softRed: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+
+    --darkDesaturatedCyan: hsl(167, 40%, 24%); 
+    --darkModerateCyan: hsl(168, 34%, 66%);
+
+    --darkBlue: hsl(198, 62%, 26%);
+    --darkDesaturatedBlue: hsl(212, 27%, 19%);
+
+    --grayishBlue: hsl(210, 4%, 67%);
+    --darkGrayishBlue: hsl(232, 10%, 55%);
+    --veryDarkGrayishBlue: hsl(213, 9%, 39%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: black;
+}
+
+p{
+    line-height: 30px;
+}
+
+.mobile{
+    display: none;
+}
+
+nav button{
+    display: none;
+    background: transparent;
+    color: var(--white);
+    border-color: transparent;
+    cursor: pointer;
+}
+nav button i{
+    font-size: 1.5rem;
+}
+
+
+
+/* ************ HEADER *************** */
+
+header{
+    position: relative;
+    padding-top: 45px;
+    height: 100vh;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
+    margin: auto;
+}
+
+header nav .logo{
+    width: 150px;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+header nav ul li a{
+    color: var(--white);
+}
+
+.contactBtn a{
+    font-family: "Fraunces", serif; 
+    font-weight: 700;
+    color: black;
+    padding: 17px 25px;
+    background: var(--white);
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.contactBtn a:hover{
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.267);
+}
+
+.headerBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+}
+
+.heroContent{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.heroContent h1{
+    font-family: "Fraunces", serif;
+    color: white;
+    font-size: 65px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    letter-spacing: 12px;
+}
+
+
+
+
+/* ************ SERVICES *************** */
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxDiv{
+    width: 100%;
+    display: flex;
+}
+
+.box{
+    position: relative;
+    width: 50%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .boxContent{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 25px;
+}
+
+.box .boxContent h1,
+.box .boxContentOnImg h1
+{
+    font-family: "Fraunces", serif;
+    font-size: 42px;
+    color: var(--darkDesaturatedBlue);
+    font-weight: 900;
+}
+.box .boxContent p{
+    color: var(--darkGrayishBlue);
+}
+.btn{
+    position: relative;
+    font-family: "Fraunces", serif;
+    color: var(--darkDesaturatedBlue);
+    font-weight: 900;
+}
+.btn:hover::before{
+    position: absolute;
+    content: "";
+    top: 60%;
+    left: -6%;
+    width: 112%;
+    height: 10px;
+    background: var(--yellow);
+    border-radius: 20px;
+    z-index: -1;
+}
+.standOut:hover::before{
+    background: var(--softRed);
+}
+
+.box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.boxContentOnImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.box:has(.boxContentOnImg){
+    align-items: end;
+}
+
+.box .boxContentOnImg h1{
+    font-size: 30px;
+}
+.box .graphic{
+    color: var(--darkDesaturatedBlue) !important;
+}
+.box .photography{
+    color: var(--darkBlue) !important;
+}
+
+
+
+
+/* ************ TESTIMONIALS *************** */
+
+.testimonialsDiv{
+    margin: 150px 0px;
+}
+
+.testimonialHeading{
+    margin-bottom: 100px;
+    text-align: center;
+    letter-spacing: 7px;
+    color: var(--grayishBlue);
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+}
+
+.testimonials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+.testimonial img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.testimonial .reviewText{
+    color: var(--veryDarkGrayishBlue);
+}
+
+.testimonial .userInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.testimonial .userInfo h2{
+    font-family: "Fraunces", serif;
+    color: var(--darkDesaturatedBlue);
+    font-weight: 900;
+}
+.testimonial .userInfo p{
+    font-size: 15px;
+    color: var(--grayishBlue);
+}
+
+
+
+
+/* ************ GALLERY *************** */
+
+.galleryDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.galleryDiv img{
+    width: 25%;
+}
+
+
+
+/************* FOOTER *************** */
+
+.footer{
+    width: 100%;
+    background: var(--darkModerateCyan);
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer .logo{
+    filter: invert(70%) sepia(21%) saturate(1105%) hue-rotate(116deg) brightness(99%) contrast(85%);
+}
+
+.footer .footerLinks{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer .footerLinks li a{
+    color: var(--darkDesaturatedCyan);
+    transition: 0.2s;
+}
+.footer .footerLinks li a:hover{
+    color: var(--white);
+}
+
+.footer .socialIcons{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.footer .socialIcons img{
+    transition: 0.2s;
+}
+.footer .socialIcons img:hover{
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(16deg) brightness(200%) contrast(101%);
+    cursor: pointer;
+}
+
+
+
+
+/* ************ MEDIA QUERIES *************** */
+
+@media only screen and (max-width: 1100px){
+    header{
+        height: 90vh;
+    }
+    .heroContent h1{
+        font-size: 45px;
+        margin-bottom: 80px;
+    }
+    .heroContent img{
+        width: 30px;
+    }
+    .box{
+        height: 65vh;
+    }
+    .box .boxContent{
+        width: 80%;
+    }
+    .box .boxContentOnImg{
+        width: 80%;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px){
+    header{
+        height: 80vh;
+    }
+    header nav{
+        width: 84%;
+        position: relative;
+    }
+    header nav ul{
+        position: absolute;
+        background: var(--white);
+        top: 300%;
+        right: 0%;
+        flex-direction: column;
+        width: 60%;
+        padding: 60px 0px;
+    }
+    header nav ul::before{
+        position: absolute;
+        content:"";
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid var(--white);
+        margin: 2rem;
+        top: -15%;
+        right: -61px;
+        z-index: -1;
+        transform: rotate(-90deg);
+    }
+    header nav ul li a{
+        color: var(--veryDarkGrayishBlue);
+    }
+    .contactBtn a{
+        background: var(--yellow);
+    }
+    .heroContent h1{
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+    .heroContent img{
+        width: 30px;
+    }
+    header nav ul{
+        display: none;
+    }
+    #open_menu_btn{
+        display: inline-block;
+    }
+    .testimonials{
+        width: 90%;
+    }
+    .testimonial .reviewText{
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    header{
+        height: 60vh;
+    }
+    .heroContent{
+        margin-top: 40px;
+    }
+    .heroContent h1{
+        font-size: 30px;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .box{
+        height: 50vh;
+    }
+    .box .boxContent h1{
+        font-size: 28px;
+    }
+    .box .boxContent p, .box .boxContentOnImg p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .box .boxContentOnImg h1{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 540px){
+    .desktop{
+        display: none;
+    }
+    header nav ul{
+        width: 90%;
+    }
+    .mobile{
+        display: block;
+        width: 100%;
+    }
+    header{
+        height: 100vh;
+        width: 100vw;
+    }
+    .heroContent{
+        margin-top: 140px;
+    }
+    .heroContent h1{
+        font-size: 35px;
+        width: 90%;
+        margin-bottom: 90px;
+    }
+    .heroContent img{
+        width: 50px;
+    }
+    .services{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+    }
+    .box .boxContent{
+        align-items: center;
+        text-align: center;
+    }
+    .boxDiv{
+        flex-direction: column-reverse;
+    }
+    .testimonialHeading{
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+    .testimonials{
+        flex-direction: column;
+        width: 80%;
+    }
+    .galleryDiv{
+        flex-wrap: wrap;
+    }
+    .galleryDiv img{
+        width: 50%;
+    }
+    .graphicsBox, .photographyBox{
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    header{
+        height: 80vh;
+    }
+    header nav ul{
+        width: 100%;
+    }
+    .heroContent{
+        margin-top: 70px;
+    }
+    .heroContent h1{
+        font-size: 45px;
+        letter-spacing: 5px;
+        margin-bottom: 60px;
+    }
+    .box{
+        height: 40vh;
+    }
+    .graphicsBox, .photographyBox{
+        height: 70vh;
+    }
+    .box .boxContentOnImg p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .box .boxContentOnImg h1{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 360px){
+    .heroContent{
+        margin-top: 90px;
+    }
+    .heroContent h1{
+        font-size: 35px;
+    }
+    .footer .footerLinks{
+        gap: 15px;
+    }
+}
